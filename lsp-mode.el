@@ -4897,7 +4897,7 @@ identifier and the position respectively."
          (len (length line)))
     (add-face-text-property (max (min start-char len) 0)
                             (max (min end-char len) 0)
-                            'highlight t line)
+                            'xref-match nil line)
     ;; LINE is nil when FILENAME is not being current visited by any buffer.
     (xref-make (or line filename)
                (xref-make-file-location
